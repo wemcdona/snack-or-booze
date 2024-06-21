@@ -5,12 +5,17 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardText,
   ListGroup,
   ListGroupItem
 } from "reactstrap";
 
-function FoodMenu({ items, title }) {
+/**
+ * Generic Menu component to list items.
+ * @param {Object} props - The component props.
+ * @param {Array} props.items - List of items to display.
+ * @param {string} props.title - Title of the menu.
+ */
+function Menu({ items, title }) {
   return (
     <section className="col-md-4">
       <Card>
@@ -18,10 +23,6 @@ function FoodMenu({ items, title }) {
           <CardTitle className="font-weight-bold text-center">
             {title} Menu
           </CardTitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </CardText>
           <ListGroup>
             {items.map(item => (
               <Link to={`/${title.toLowerCase()}/${item.id}`} key={item.id}>
@@ -35,4 +36,4 @@ function FoodMenu({ items, title }) {
   );
 }
 
-export default FoodMenu;
+export default Menu;

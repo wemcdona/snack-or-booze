@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import SnackOrBoozeApi from "./Api";
 import NavBar from "./NavBar";
-import Menu from "./ItemDetail";
+import Menu from "./Menu";
+import ItemDetail from "./ItemDetail";
 import AddItem from "./AddItem";
-import Menu from "./FoodMenu";
-import Snack from "./FoodItem";
 import NotFound from "./NotFound";
 
 function App() {
@@ -43,13 +42,13 @@ function App() {
               <Menu items={snacks} title="Snacks" />
             </Route>
             <Route path="/snacks/:id">
-              <ItemDetail items={snacks} itemType="snacks" cantFind="/snacks" />
+              <ItemDetail items={snacks} cantFind="/snacks" />
             </Route>
             <Route exact path="/drinks">
               <Menu items={drinks} title="Drinks" />
             </Route>
             <Route path="/drinks/:id">
-              <ItemDetail items={drinks} itemType="drinks" cantFind="/drinks" />
+              <ItemDetail items={drinks} cantFind="/drinks" />
             </Route>
             <Route exact path="/add">
               <AddItem />

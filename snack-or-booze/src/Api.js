@@ -2,15 +2,11 @@ import axios from "axios";
 
 const BASE_API_URL = "http://localhost:5000";
 
-/* 
-  json-server will give you CRUD endpoints on snacks and drinks.
-  Here we've provided you with a single action to get all drinks.
-
-  You'll need to add to this class as you build features for the app.
-*/
-
+/**
+ * SnackOrBoozeApi class to handle all API interactions.
+ * Provides methods for fetching, creating, updating, and deleting snacks and drinks.
+ */
 class SnackOrBoozeApi {
-
   // Snacks API Methods
 
   /**

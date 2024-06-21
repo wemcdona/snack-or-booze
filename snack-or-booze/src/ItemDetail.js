@@ -2,7 +2,13 @@ import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
-function FoodItem({ items, cantFind }) {
+/**
+ * Generic ItemDetail component to display details of an item.
+ * @param {Object} props - The component props.
+ * @param {Array} props.items - List of items to search from.
+ * @param {string} props.cantFind - Redirect path if item not found.
+ */
+function ItemDetail({ items, cantFind }) {
   const { id } = useParams();
   const itemId = parseInt(id, 10); // Ensure id is an integer
 
@@ -29,5 +35,4 @@ function FoodItem({ items, cantFind }) {
   );
 }
 
-export default FoodItem;
-
+export default ItemDetail;

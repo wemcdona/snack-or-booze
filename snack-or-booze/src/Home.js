@@ -1,6 +1,12 @@
 import React from "react";
 import { Card, CardBody, CardTitle } from "reactstrap";
 
+/**
+ * Home component to display welcome message and counts of snacks and drinks.
+ * @param {Object} props - The component props.
+ * @param {Array} props.snacks - List of snacks.
+ * @param {Array} props.drinks - List of drinks.
+ */
 function Home({ snacks, drinks }) {
   return (
     <section className="col-md-8">
